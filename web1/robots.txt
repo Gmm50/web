@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /fake_path/
+Disallow: /flag_here/

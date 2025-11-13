@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>受限页面</title>
+  <script>
+    // 禁用右键菜单
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    // 禁用F12键
+    document.addEventListener('keydown', e => {
+      if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+        e.preventDefault();
+        alert('禁止使用开发者工具！');
+      }
+    });
+  </script>
+</head>
+<body>
+  <h3>右键和F12都被限制了...换种方式看看源码？</h3>
+  <!-- flag就在这里：flag{view_source_by_browser_menu} -->
+</body>
+</html>
